@@ -28,14 +28,28 @@
   <p>CMD ya da CTRL + yön tuşları ile matriksin içerisinde hızlı navigasyon yapılabilir. Scroll ederek yön bulmak kullanışsızdır.</p>
   <p>Seçim yapmak için ise 'CMD, CTRL + Shift + Arrows' yaparız.</p>
   <p>Aritmetik işlemleri her zaman hücre referansı vererek yapmalıyız. Çünkü hücrelerin içerisindeki veriler her zaman değiştirilebilirler. Hücre referansı verdiğimiz zaman</p>
-  <img src="img/excel/excel-drag.png" alt="excel-drag">
+  <img src="excel-img/excel-drag.png" alt="excel-drag">
   <p>Yukarıda hücrenin sağ altında görünen mavi noktaya basılı tutatarak sağdaki hücrelere doğru sürüklediğimizde o hücredeki işlem sağdaki hücrelere de kopyalanmış olur. Fakat kendi üstlerinde hücreler için işlem yaparlar. Bu özellik Excel'in bel kemiğidir.</p>
-  <p>Hücrelerde tanımlanmış veri çeşitleri vardır. Yani yapılacak işleme göre o hücrede hangi türde verinin barınacağını seçmemiz gerekiyor. Bu date, number, currency vs. olabilir. Eğer bu birimleri doğru seçmezsek hatalı işlem yaparız.</p>
-  <img src="img/excel/excel-drag-and-drop.png" alt="excel-drag-and-drop">
+  <p>Hücrelerde tanımlanmış veri formatları vardır. Yapılacak işe göre hangi tipte verinin hücrede tutulacağını temsil eder. Genelde varsayılan olarak General ya da Number tanımlı gelir. Formatlara dikkat edilmezse hatalı veri üretilebilir. Örneğin Date formatındayken KDV hesabı yapmaya kalkışırsak alakasız bir veri üretilir. Bunu seçmek için hücreye sağ tıklayarak Format Cells sekmesine ulaşılır.</p>
+  <img src="excel-img/excel-drag-and-drop.png alt="excel-drag-and-drop">
   <p>Hücrelerin direkt kendilerini üzerine basılı tutarak sürüklediğimizde taşıyabiliriz. Taşınacak olan hücre içerisinde formül, veri vs. ile taşındığı konuma yerleştirilir.</p>
   <br>
-  <p></p>
+  <img src="excel-img/excel-drag-for-same-cell.png" alt="excel-drag-for-same-cell">
+  <p>Yukarıdaki görselde görülen formülü onun altındaki ve sağındaki hücreler için yapmak istediğimizde sadece sürükle bırak yöntemi yeterli değildir. Çünkü görüldüğü üzere KDV oranı bilgisi sadece tek bir hücrede yer almakta. Dolayısıyla diğer hücreler içinde bizim bu veriyi sadece o hücreden yani tek bir hücreden almamız gerekiyor. Bunun çözümünü aşağıdaki görselden inceleyebilirsiz:</p>
+  <img src="excel-img/excel-drag-for-same-cell-result.png" alt="excel-drag-for-same-cell-result">
+  <p>Görüldüğü üzere kesik kesik işaretlenmiş olan hücreler o hücre için işlem yapılmakta olan hücreleri işaret etmekte. Yani seçilen en son hücre de KDV oranını aynı hücreden alıyor. Bunu sağlamak için $ işareti ile sütun ve satırı çıpaladık. Eğer $H31 şeklinde yazmımş olsaydık sadece sütunu çıpalamış olurduk. Fakat $H$31 şeklinde yazarak hem sütunu hem de satırı çıpalamış olduk. Bu işleme hücreyi absolute - sabitlemek denir.</p>
+  <span>Böylece yukarıda yaptığımız işlemle formül oluşturmuş olduk.</span>
+  <br><br><hr>
+  <h4>Charts</h4>
+  <img src="excel-img/excel-chart-line-with-markers.png" alt="excel-chart-line-with-markers">
+  <p>Yukarıda Nike'ın çeyreklik sezon satışları yazılı. Bu rakamlara göre bir grafik çıktısı alarak gidişatın nereye doğru olduğunu gözlemlemek mümkün oluyor. Yani grafiklerin rakamları okumayı kolaylaştımak gibi bir avantajları var.</p>
+  <p>Excel bu grafiği oluşturmak için ilgili hücrelerin tamamı seçilir ve insert menüsünden istenilen tarzdaki grafiğe tıklanır. Bunun sonucunda dosyaya taşınabilir bir grafik getirilir.</p>
+  <p>Tabiki bu grafikleri üzerlerine bazı matematiksel formülleri ekleyerek daha detaylı hale getirebiliyoruz. Örneğin doğrunun denklemini ve r karesini ekranda gösterebiliriz. Bunu grafikteki çizgilere sağ tıklayıp 'add trendline' seçeneğinden 'Display Equation on char' ve 'Display R-squared value on chart' seçenekleri işaretleyerek yapabiliriz. Bunu yaptığımız takdirde aşağıdaki sonuca ulaşırız:</p>
+  <img src="excel/excel-img/excel-chart-line-with-markers-result.png" alt="excel-chart-line-with-markers-result">
+  <p>Görüldüğü gibi grafiğin sağ üstünde yukarıda istediğimiz verilere ulaşmış olduk. Formül bile şu bilgiyi veriyor: Satışlar 3.8 milyar dolardan başlar ve her çeğrekte 0.13 artar. Kısaca bu formül, elimideki veriye en uyumlu olan doğruyu bulmamızı sağladı. Bu bize basitçe grafiğin geleceği hakkında kafadan atarak tahmin etmeye nazaran daha isabetli bir tahmin üretme konusunda yardımcı olacak. Mesela bu grafikteki en son sezon satışına 0.13 eklersek muhtemelen bir sonraki sezonun satış rakamını tutturmuş olacağız. Fakat bu sadece işin matematiği bunun dışında bir çok faktör bulunmakta şirketin yapısı, içinde çaışanlar, yönetenler, dış dünyada olan şeyler bu satışları gayet net etkileyebilir. Mesela Covid-19'un satışları olumsuz etkileceğini bu grafikle öngöremeyiz.</p>
+  <img src="excel-img/excel-autoregression.png" alt="excel-autoregression">
+  <p>Daha önceden öğrendiğimiz gibi hücrenin sağ altındaki noktadan istenilen yöne doğru çekildiğinde seçili olan hücrelerin üzerindeki işlem seçilen yeni hücreler için de devam eder. Dolayısıyla yukarıdaki grafiktek işlemde uygulanan formül tekrar uygulanarak gelecek sezonların satış tahminleri yapıldı. Fakat sezondan sezona farklılık göstereceğinden mesela sohbahar sezonunda satışlar tahmin edilenin altında olabileceğinden ancak 0.13 ile çarpımın %90 -%95 civarında gerçekleşebileceğini öngörerek daha gerçekçi bir sonuç elde edebiliriz. Örneğin; =(B50+0,13)*0,95</p>
+  <hr>
 
-  
 </body>
 </html>
