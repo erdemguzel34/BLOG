@@ -3,19 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <title>Excel</title>
 </head>
 <body>
-  <h1>Excel</h1>
-  <nav>
-    <a href="home.html">Home</a>
-    <a href="excel.html">Excel</a>
-    <a href="religion.html">Religion</a>
-    <a href="psychology.html">Psychology</a>
-    <a href="presentation.html">Presentation</a>
-    <a href="interview.html">Interview</a>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home.html">Blog</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="excel.html">Excel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="religion.html">Religion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="psychology.html">Psychology</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="presentation.html">Presentation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="interview.html">Interview</a>
+          </li>
+          <li class="nav-item dropdown invisible">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown link
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
-  <span>Not:</span><mark>Excel'in evrensel kullanım dili İnglizce'dir. Formülleri yazdığınız dilden farklı bir dil kullanan Excel'de o dosyayı açarsanız yazdığınız formüller çalışmayacaktır!!</mark>
+
+  <h1>Excel</h1>
+  <h3>Excel'in evrensel kullanım dili İngilizce'dir. Formülleri yazdığınız dilden farklı bir dil kullanan Excel'de o dosyayı açarsanız yazdığınız formüller çalışmayacaktır!!</h3>
   <h4>Hücreler</h4>
   <ul>
     <span>Excel'de hücrelere üç tipte veri girebiliriz:</span>
@@ -33,13 +69,12 @@
   <p>Hücrelerde tanımlanmış veri formatları vardır. Yapılacak işe göre hangi tipte verinin hücrede tutulacağını temsil eder. Genelde varsayılan olarak General ya da Number tanımlı gelir. Formatlara dikkat edilmezse hatalı veri üretilebilir. Örneğin Date formatındayken KDV hesabı yapmaya kalkışırsak alakasız bir veri üretilir. Bunu seçmek için hücreye sağ tıklayarak Format Cells sekmesine ulaşılır.</p>
   <img src="excel-img/excel-drag-and-drop.png" alt="excel-drag-and-drop">
   <p>Hücrelerin direkt kendilerini üzerine basılı tutarak sürüklediğimizde taşıyabiliriz. Taşınacak olan hücre içerisinde formül, veri vs. ile taşındığı konuma yerleştirilir.</p>
-  <br>
   <img src="excel-img/excel-drag-for-same-cell.png" alt="excel-drag-for-same-cell">
   <p>Yukarıdaki görselde görülen formülü onun altındaki ve sağındaki hücreler için yapmak istediğimizde sadece sürükle bırak yöntemi yeterli değildir. Çünkü görüldüğü üzere KDV oranı bilgisi sadece tek bir hücrede yer almakta. Dolayısıyla diğer hücreler içinde bizim bu veriyi sadece o hücreden yani tek bir hücreden almamız gerekiyor. Bunun çözümünü aşağıdaki görselden inceleyebilirsiz:</p>
   <img src="excel-img/excel-drag-for-same-cell-result.png" alt="excel-drag-for-same-cell-result">
   <p>Görüldüğü üzere kesik kesik işaretlenmiş olan hücreler o hücre için işlem yapılmakta olan hücreleri işaret etmekte. Yani seçilen en son hücre de KDV oranını aynı hücreden alıyor. Bunu sağlamak için $ işareti ile sütun ve satırı çıpaladık. Eğer $H31 şeklinde yazmımş olsaydık sadece sütunu çıpalamış olurduk. Fakat $H$31 şeklinde yazarak hem sütunu hem de satırı çıpalamış olduk. Bu işleme hücreyi absolute - sabitlemek denir.</p>
   <span>Böylece yukarıda yaptığımız işlemle formül oluşturmuş olduk.</span>
-  <br><br><hr>
+  <hr>
   <h4>Grafikler(Charts)</h4>
   <img src="excel-img/excel-chart-line-with-markers.png" alt="excel-chart-line-with-markers">
   <p>Yukarıda Nike'ın çeyreklik sezon satışları yazılı. Bu rakamlara göre bir grafik çıktısı alarak gidişatın nereye doğru olduğunu gözlemlemek mümkün oluyor. Yani grafiklerin rakamları okumayı kolaylaştımak gibi bir avantajları var.</p>
@@ -49,9 +84,7 @@
   <img src="excel-img/excel-chart-line-with-markers-result.png" alt="excel-chart-line-with-markers-result">
   <p>Daha önceden öğrendiğimiz gibi hücrenin sağ altındaki noktadan istenilen yöne doğru çekildiğinde seçili olan hücrelerin üzerindeki işlem seçilen yeni hücreler için de devam eder. Fakat bunu eğer değiştirilmezse varsayılan olarak yalnızca doğrusal regresyonda yapar. Dolayısıyla yukarıdaki grafiktek işlemde uygulanan formül tekrar uygulanarak gelecek sezonların satış tahminleri yapıldı. Fakat sezondan sezona farklılık göstereceğinden mesela sohbahar sezonunda satışlar tahmin edilenin altında olabileceğinden ancak 0.13 ile çarpımın %90 -%95 civarında gerçekleşebileceğini öngörerek daha gerçekçi bir sonuç elde edebiliriz. Örneğin; =(B50+0,13)*0,95.</p>
   <img src="excel-img/excel-autoregression.png" alt="excel-autoregression">
-  <br>
   <hr>
-  <br>
   <h4>Aritmetik İşlemler</h4>
 
   <h5>Toplam(SUM)</h5>
@@ -81,5 +114,6 @@
   <p>Yukarıdaki işlemi if/else kullanarak yapıyoruz:</p>
   <img src="excel-img/excel-if_else.png" alt="excel-if_else">
   <p>Geçme notunu çapalıyoruz. Seçtiğimiz hücreyi çapaladığımızla karşılaştırıyoruz. Sonuç true ise 'FAIL' false ise 'PASS' yazıyor. Sonuç listesinide Highlight edip Conditional Formatting ile 'FALSE' olanları kırmızıya boyuyoruz.</p>
+  </div>
 </body>
 </html>
