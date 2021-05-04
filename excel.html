@@ -15,7 +15,7 @@
     <a href="presentation.html">Presentation</a>
     <a href="interview.html">Interview</a>
   </nav>
-
+  <span>Not:</span><mark>Excel'in evrensel kullanım dili İnglizce'dir. Formülleri yazdığınız dilden farklı bir dil kullanan Excel'de o dosyayı açarsanız yazdığınız formüller çalışmayacaktır!!</mark>
   <h4>Hücreler</h4>
   <ul>
     <span>Excel'de hücrelere üç tipte veri girebiliriz:</span>
@@ -27,11 +27,11 @@
   <p>Image'ler hücrenin içerisine koyulamazlar sadece dosyanın üzerine yapıştırılırlar.</p>
   <p>CMD ya da CTRL + yön tuşları ile matriksin içerisinde hızlı navigasyon yapılabilir. Scroll ederek yön bulmak kullanışsızdır.</p>
   <p>Seçim yapmak için ise 'CMD, CTRL + Shift + Arrows' yaparız.</p>
-  <p>Aritmetik işlemleri her zaman hücre referansı vererek yapmalıyız. Çünkü hücrelerin içerisindeki veriler her zaman değiştirilebilirler. Hücre referansı verdiğimiz zaman</p>
+  <p>Aritmetik işlemleri her zaman hücre referansı vererek yapmalıyız. Çünkü hücrelerin içerisindeki veriler her zaman değiştirilebilirler.</p>
   <img src="excel-img/excel-drag.png" alt="excel-drag">
   <p>Yukarıda hücrenin sağ altında görünen mavi noktaya basılı tutatarak sağdaki hücrelere doğru sürüklediğimizde o hücredeki işlem sağdaki hücrelere de kopyalanmış olur. Fakat kendi üstlerinde hücreler için işlem yaparlar. Bu özellik Excel'in bel kemiğidir.</p>
   <p>Hücrelerde tanımlanmış veri formatları vardır. Yapılacak işe göre hangi tipte verinin hücrede tutulacağını temsil eder. Genelde varsayılan olarak General ya da Number tanımlı gelir. Formatlara dikkat edilmezse hatalı veri üretilebilir. Örneğin Date formatındayken KDV hesabı yapmaya kalkışırsak alakasız bir veri üretilir. Bunu seçmek için hücreye sağ tıklayarak Format Cells sekmesine ulaşılır.</p>
-  <img src="excel-img/excel-drag-and-drop.png alt="excel-drag-and-drop">
+  <img src="excel-img/excel-drag-and-drop.png" alt="excel-drag-and-drop">
   <p>Hücrelerin direkt kendilerini üzerine basılı tutarak sürüklediğimizde taşıyabiliriz. Taşınacak olan hücre içerisinde formül, veri vs. ile taşındığı konuma yerleştirilir.</p>
   <br>
   <img src="excel-img/excel-drag-for-same-cell.png" alt="excel-drag-for-same-cell">
@@ -40,16 +40,46 @@
   <p>Görüldüğü üzere kesik kesik işaretlenmiş olan hücreler o hücre için işlem yapılmakta olan hücreleri işaret etmekte. Yani seçilen en son hücre de KDV oranını aynı hücreden alıyor. Bunu sağlamak için $ işareti ile sütun ve satırı çıpaladık. Eğer $H31 şeklinde yazmımş olsaydık sadece sütunu çıpalamış olurduk. Fakat $H$31 şeklinde yazarak hem sütunu hem de satırı çıpalamış olduk. Bu işleme hücreyi absolute - sabitlemek denir.</p>
   <span>Böylece yukarıda yaptığımız işlemle formül oluşturmuş olduk.</span>
   <br><br><hr>
-  <h4>Charts</h4>
+  <h4>Grafikler(Charts)</h4>
   <img src="excel-img/excel-chart-line-with-markers.png" alt="excel-chart-line-with-markers">
   <p>Yukarıda Nike'ın çeyreklik sezon satışları yazılı. Bu rakamlara göre bir grafik çıktısı alarak gidişatın nereye doğru olduğunu gözlemlemek mümkün oluyor. Yani grafiklerin rakamları okumayı kolaylaştımak gibi bir avantajları var.</p>
   <p>Excel bu grafiği oluşturmak için ilgili hücrelerin tamamı seçilir ve insert menüsünden istenilen tarzdaki grafiğe tıklanır. Bunun sonucunda dosyaya taşınabilir bir grafik getirilir.</p>
   <p>Tabiki bu grafikleri üzerlerine bazı matematiksel formülleri ekleyerek daha detaylı hale getirebiliyoruz. Örneğin doğrunun denklemini ve r karesini ekranda gösterebiliriz. Bunu grafikteki çizgilere sağ tıklayıp 'add trendline' seçeneğinden 'Display Equation on char' ve 'Display R-squared value on chart' seçenekleri işaretleyerek yapabiliriz. Bunu yaptığımız takdirde aşağıdaki sonuca ulaşırız:</p>
-  <img src="excel/excel-img/excel-chart-line-with-markers-result.png" alt="excel-chart-line-with-markers-result">
-  <p>Görüldüğü gibi grafiğin sağ üstünde yukarıda istediğimiz verilere ulaşmış olduk. Formül bile şu bilgiyi veriyor: Satışlar 3.8 milyar dolardan başlar ve her çeğrekte 0.13 artar. Kısaca bu formül, elimideki veriye en uyumlu olan doğruyu bulmamızı sağladı. Bu bize basitçe grafiğin geleceği hakkında kafadan atarak tahmin etmeye nazaran daha isabetli bir tahmin üretme konusunda yardımcı olacak. Mesela bu grafikteki en son sezon satışına 0.13 eklersek muhtemelen bir sonraki sezonun satış rakamını tutturmuş olacağız. Fakat bu sadece işin matematiği bunun dışında bir çok faktör bulunmakta şirketin yapısı, içinde çaışanlar, yönetenler, dış dünyada olan şeyler bu satışları gayet net etkileyebilir. Mesela Covid-19'un satışları olumsuz etkileceğini bu grafikle öngöremeyiz.</p>
+  <p>Aşağıda görüldüğü gibi grafiğin sağ üstünde yukarıda istediğimiz verilere ulaşmış olduk. Formül bile şu bilgiyi veriyor: Satışlar 3.8 milyar dolardan başlar ve her çeğrekte 0.13 artar. Kısaca bu formül, elimideki veriye en uyumlu olan doğruyu bulmamızı sağladı. Bu bize basitçe grafiğin geleceği hakkında kafadan atarak tahmin etmeye nazaran daha isabetli bir tahmin üretme konusunda yardımcı olacak. Mesela bu grafikteki en son sezon satışına 0.13 eklersek muhtemelen bir sonraki sezonun satış rakamını tutturmuş olacağız. Fakat bu sadece işin matematiği bunun dışında bir çok faktör bulunmakta şirketin yapısı, içinde çaışanlar, yönetenler, dış dünyada olan şeyler bu satışları gayet net etkileyebilir. Mesela Covid-19'un satışları olumsuz etkileceğini bu grafikle öngöremeyiz.</p>
+  <img src="excel-img/excel-chart-line-with-markers-result.png" alt="excel-chart-line-with-markers-result">
+  <p>Daha önceden öğrendiğimiz gibi hücrenin sağ altındaki noktadan istenilen yöne doğru çekildiğinde seçili olan hücrelerin üzerindeki işlem seçilen yeni hücreler için de devam eder. Fakat bunu eğer değiştirilmezse varsayılan olarak yalnızca doğrusal regresyonda yapar. Dolayısıyla yukarıdaki grafiktek işlemde uygulanan formül tekrar uygulanarak gelecek sezonların satış tahminleri yapıldı. Fakat sezondan sezona farklılık göstereceğinden mesela sohbahar sezonunda satışlar tahmin edilenin altında olabileceğinden ancak 0.13 ile çarpımın %90 -%95 civarında gerçekleşebileceğini öngörerek daha gerçekçi bir sonuç elde edebiliriz. Örneğin; =(B50+0,13)*0,95.</p>
   <img src="excel-img/excel-autoregression.png" alt="excel-autoregression">
-  <p>Daha önceden öğrendiğimiz gibi hücrenin sağ altındaki noktadan istenilen yöne doğru çekildiğinde seçili olan hücrelerin üzerindeki işlem seçilen yeni hücreler için de devam eder. Dolayısıyla yukarıdaki grafiktek işlemde uygulanan formül tekrar uygulanarak gelecek sezonların satış tahminleri yapıldı. Fakat sezondan sezona farklılık göstereceğinden mesela sohbahar sezonunda satışlar tahmin edilenin altında olabileceğinden ancak 0.13 ile çarpımın %90 -%95 civarında gerçekleşebileceğini öngörerek daha gerçekçi bir sonuç elde edebiliriz. Örneğin; =(B50+0,13)*0,95</p>
+  <br>
   <hr>
+  <br>
+  <h4>Aritmetik İşlemler</h4>
 
+  <h5>Toplam(SUM)</h5>
+  <p>=SUM(hücre:hücre) şeklinde yazarak toplama işlemini rahatça yapabiliyoruz. ':' işareti seçilen hücreler dahil aralarında kalanları seçer.</p>
+  <p>Ayrıca yukarıdaki görselde formülü yazdığımız yerin hemen solunda kalan formül çubuğuna tıklayarak seçili hücredeki formülün nasıl kullanılacağını gösterek bir sekme açılır. Eğer bir formülün veya fonksiyonun nasıl kullanılacağından emin değilsek ya da unuttuysak bu şekilde yardım alabiliriz.</p>
+  <img src="excel-img/excel-sum.png" alt="excel-sum">
+
+  <h5>Ortalama(AVERAGE)</h5>
+  <p>=AVERAGE(hücre:hücre)</p>
+  <p>Fonksiyon kullanmak bize dinamik bir hesaplama yapma imkanı veriyor. Veriler her zaman değişebilir, işlem yaptığımız listeye eklemeler veya çıkarmalar yapılabilir. Fonksiyonlar bu değişikliklerle tek tek uğraşmadan otomatik olarak değişiklik yapıldığı anda sonuca yansımasını sağlarlar.</p>
+  <img src="excel-img/excel-average.png" alt="excel-average">
+
+  <h5>Hücre, vektör veya matrise isim vermek (naming arrays)</h5>
+  <p>Diyelimki sürekli olarak aynı hücrelerle çalışıyoruz. Bu durumda o hücrelerin kapladığı alanın tamamını seçerek o alana bir isim atayabiliriz. Böylelikle biz ne zaman bu ismi bir fonksiyon ya da formülle anarsak Excel anlarki biz o alan üzerinde işlem yapmak istiyoruz.</p>
+  <img src="excel-img/excel-naming_arrays.png" alt="excel-naming_arrays">
+  <p>Bunu yapabilmek için isimlendirmek istediğimiz hücreleri seçip yukarıdaki görsellerin en üst solunda yazan SUM yazılı olan yere tıklayıp istediğimiz ismi girmemiz yeterlidir.</p>
+  <img src="excel-img/excel-naming_arrays_function.png" alt="excel-naming_arrays_function">
+
+  <h5>Listeye koşul ekleme - Conditional Formatting</h5>
+  <p>Programlamada bu işlem genelde if/else blokları ile yapılır. Aslında Excel'de bir kodlama dilidir ve aynı işlem yapılabilir. Fakat burada hücrelerle yani aslında görsel bişeylerle uğraştığımız için sadece biçimlendirmelerle de istediğimizi alabiliriz. Örneğin aşağıdaki görselde notu 65'ten düşük olanları kırmızı ile işaretledik.</p>
+  <p>Bunu yapmak için listenin tamamını seçiyoruz,Home > 'Conditional Formatting' > 'Highlight  Formatting' > 'Less Than' > bu noktada 65 yazılı olan hücreyi seçipi OK'a tıklıyoruz.</p>
+  <img src="excel-img/excel-conditioanal_formatting.png" alt="excel-conditioanal_formatting">
+  <p>Conditional Formatting'in görsellik açısından zenginleştirici özellikleri vardır. Mesela yukarıdaki listeyi aşağıdaki hale getirebiliriz. Bu trafik ışıkları efekti verir, en yüksek yeşil ve en düşük kırmızı renge boyanır. Arada kalanlarda turuncu sarı tonlarında olur. Bunun gibi ya da çok daha farklı bir çok format bulunmakta.</p>
+  <img src="excel-img/excel-CD-color-scheme.png" alt="excel-CD-color-scheme">
+
+  <h5>If/else</h5>
+  <p>Yukarıdaki işlemi if/else kullanarak yapıyoruz:</p>
+  <img src="excel-img/excel-if_else.png" alt="excel-if_else">
+  <p>Geçme notunu çapalıyoruz. Seçtiğimiz hücreyi çapaladığımızla karşılaştırıyoruz. Sonuç true ise 'FAIL' false ise 'PASS' yazıyor. Sonuç listesinide Highlight edip Conditional Formatting ile 'FALSE' olanları kırmızıya boyuyoruz.</p>
 </body>
 </html>
