@@ -1,7 +1,7 @@
 @todo-list
 
 @critical 
-☐ Create HTML for Excel #1.
+✔ Create HTML for Excel #1. @done(21-05-04 20:23)
 ☐ Create HTML for Excel #2.
 ☐ Create HTML for Excel #3.
 ☐ Start again the Chain.
@@ -21,11 +21,12 @@
 ✔ Start again the Chain. @done(21-05-04 20:30)
 
 @today (21-05-05)
-☐ Chain.
+✔ Chain. @done(21-05-05 21:24)
 ☐ Create HTML for Excel #2.
-☐ Create HTML for Excel #3.
 
 @today (21-05-06)
+☐ Chain.
 ☐ Edit CV's. // Make a CV for BTCTRK and make one to for Software companies.
+☐ Create HTML for Excel #3.
 ☐ Start codecademy - CSS course.
-☐ Add all CSS notes in the BLOG.
+☐ Add CSS notes in the BLOG.
